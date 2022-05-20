@@ -1,2 +1,2 @@
-#A2Z Agri technica hackathon
+# A2Z Agri technica hackathon
 
