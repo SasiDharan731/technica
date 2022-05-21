@@ -6,28 +6,28 @@ import location from '../Assets/location.png'
 import planting from '../Assets/planting.png'
 import harvesting from '../Assets/harvesting.png'
 import maintenance from '../Assets/maintenance.png'
-import axios from 'axios';
+// import axios from 'axios';
 import { useRouter } from 'next/router';
 
 function robotcontrol() {
     const router = useRouter()
-    const [stat, setStat] = useState(false)
-    const sendCmd = () => {
+//     const [stat, setStat] = useState(false)
+//     const sendCmd = () => {
        
-axios.get("http://172.20.10.2:5000/run").then(() => {
-            setStat(true)
-        }).catch(() => {
-            setStat(false)
-        })
+// axios.get("http://172.20.10.2:5000/run").then(() => {
+//             setStat(true)
+//         }).catch(() => {
+//             setStat(false)
+//         })
         
-    }
-    const sendCmdstp = () => {
-        axios.get("http://172.20.10.2:5000/stop").then(() => {
-            setStat(true)
-        }).catch(() => {
-            setStat(false)
-        })
-    }
+//     }
+//     const sendCmdstp = () => {
+//         axios.get("http://172.20.10.2:5000/stop").then(() => {
+//             setStat(true)
+//         }).catch(() => {
+//             setStat(false)
+//         })
+//     }
   return (
     <div>
 --
@@ -46,15 +46,15 @@ axios.get("http://172.20.10.2:5000/run").then(() => {
             <div className={styles.camerafeed}>
             <img
                         className={styles.camFeed}
-                        src="http://172.20.10.2:8080/?action=stream"
+                        src=""
                     />
             </div>
 
-            <div className={styles.seedsbutton} onClick={sendCmd}>
+            <div className={styles.seedsbutton} >
                 Plant Seeds 
             </div>
 
-            <div className={styles.seedsbutton} onClick={sendCmdstp}>
+            <div className={styles.seedsbutton}>
                 Stop
             </div>
         </div>
